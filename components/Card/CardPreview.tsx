@@ -1,4 +1,5 @@
 import Image from "next/image";
+
 import { Card, CardContent, CardFooter, CardHeader, CardTitle } from "../ui/card";
 import ButtonRectangle from "../Button/ButtonRectangle";
 
