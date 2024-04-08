@@ -1,7 +1,7 @@
 import Image from "next/image";
 
 import { Card, CardContent, CardFooter, CardHeader, CardTitle } from "../ui/card";
-import ButtonRectangle from "../Button/ButtonRectangle";
+import { Button } from "../ui/button";
 
 export default function CardPreview() {
     return (
@@ -17,7 +17,7 @@ export default function CardPreview() {
                 <span>180$/hour</span>
             </CardContent>
             <CardFooter>
-                <ButtonRectangle title="CALL NOW" />
+                <Button className="w-full py-8" variant='outline'>BOOK NOW</Button>
             </CardFooter>
         </Card>
     );

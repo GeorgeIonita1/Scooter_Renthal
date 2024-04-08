@@ -8,7 +8,7 @@ export default function Index() {
 
     return (
         <main>
-            <h1>{t('title')}</h1>
+            {/* <h1>{t('title')}</h1> */}
             <HeroBanner />
             <CardGrid />
         </main>
