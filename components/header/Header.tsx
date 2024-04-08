@@ -1,22 +1,27 @@
 import Link from "next/link";
 import { Separator } from "../ui/separator";
 import { Sheet, SheetClose, SheetContent, SheetTrigger } from "../ui/sheet";
+import { Button } from "../ui/button";
 
 export default function Header() {
     return (
         <header>
-            <div className="max-sm:hidden flex justify-end gap-4 bg-black text-white">
-                <div>+40.123.456.789</div>
-                <Separator orientation="vertical" className="h-full" />
-                <div>Drumul taberei</div>
+            <div className="max-sm:hidden bg-black text-white">
+                <div className="container flex justify-end gap-4">
+                    <div>+40.123.456.789</div>
+                    <Separator orientation="vertical" className="h-full" />
+                    <div>Drumul taberei</div>
+                </div>
             </div>
             <div className="container flex justify-between">
-                <Link href='/'>Everest</Link>
+                <Button className="p-8" variant='link'>
+                    <Link href='/'>Everest</Link>
+                </Button>
                 <nav className="max-sm:hidden">
-                    <ul className="flex gap-12">
-                        <li><Link href='/'>Home</Link></li>
-                        <li><Link href='/'>Terms and conditions</Link></li>
-                        <li><Link href='/'>Contact</Link></li>
+                    <ul className="flex">
+                        <li><Button className="p-8" variant='link'><Link href='/'>Home</Link></Button></li>
+                        <li><Button className="p-8" variant='link'><Link href='/'>Terms and conditions</Link></Button></li>
+                        <li><Button className="p-8" variant='link'><Link href='/'>Contact</Link></Button></li>
                     </ul>
                 </nav>
                 <div className="sm:hidden">
