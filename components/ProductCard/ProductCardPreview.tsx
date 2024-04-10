@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Link from "next/link";
 
 import { Card, CardContent, CardFooter, CardHeader, CardTitle } from "../ui/card";
 import { Button } from "../ui/button";
@@ -21,7 +22,9 @@ export default function ProductCardPreview() {
                 <a className="block w-full" href={`tel:${phoneNumber}`}>
                     <Button className="w-full py-8 bg-black text-white" variant='outline'>BOOK NOW</Button>
                 </a>
-                <Button className="w-full py-8" variant='outline'>DETAILS</Button>
+                <Link href='/en/product/3' className="block w-full">
+                    <Button className="w-full py-8" variant='outline'>DETAILS</Button>
+                </Link>
             </CardFooter>
         </Card>
     );

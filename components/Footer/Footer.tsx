@@ -31,8 +31,10 @@ export default function Footer() {
                         </div>
                     </div>
                 </div>
+            </div>
 
-                <Separator />
+            <Separator />
+            <div className="container">
                 <div className="py-16 grid sm:grid-cols-2 max-sm:gap-10">
                     <div>
                         <h3>Everest</h3>
@@ -50,8 +52,10 @@ export default function Footer() {
                         </ul>
                     </div>
                 </div>
+            </div>
 
-                <Separator />
+            <Separator />
+            <div className="container">
                 <div className="py-2">
                     <span>2024 Everest. All rights reserved</span>
                 </div>
