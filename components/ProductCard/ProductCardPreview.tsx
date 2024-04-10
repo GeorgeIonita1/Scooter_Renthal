@@ -4,7 +4,7 @@ import { Card, CardContent, CardFooter, CardHeader, CardTitle } from "../ui/card
 import { Button } from "../ui/button";
 import { phoneNumber } from "@/lib/utils";
 
-export default function CardPreview() {
+export default function ProductCardPreview() {
     return (
         <Card className="p-12">
             <CardHeader>
