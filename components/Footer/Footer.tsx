@@ -4,9 +4,9 @@ import { Separator } from "../ui/separator";
 
 export default function Footer() {
     return (
-        <footer className="bg-black text-white py-16">
+        <footer className="bg-black text-white">
             <div className="container">
-                <div className="pb-8">
+                <div className="py-16">
                     <div className="grid gap-y-8 sm:grid-cols-2 md:grid-cols-3">
                         <div className="flex gap-2 items-center">
                             <MapPin size={46} />
@@ -33,7 +33,28 @@ export default function Footer() {
                 </div>
 
                 <Separator />
+                <div className="py-16 grid sm:grid-cols-2 max-sm:gap-10">
+                    <div>
+                        <h3>Everest</h3>
+                        <p className="mt-6">Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                            Non dolores quidem iure et cumque cupiditate laboriosam nobis culpa sapiente. Nobis?
+                        </p>
+                    </div>
+                    <div className="sm:flex sm:flex-col sm:items-center gap-6">
+                        <h4>Quick links</h4>
+                        <ul>
+                            <li>FAQ</li>
+                            <li>Contect</li>
+                            <li>Services</li>
+                            <li>How we work</li>
+                        </ul>
+                    </div>
+                </div>
 
+                <Separator />
+                <div className="py-2">
+                    <span>2024 Everest. All rights reserved</span>
+                </div>
             </div>
         </footer>
     );
