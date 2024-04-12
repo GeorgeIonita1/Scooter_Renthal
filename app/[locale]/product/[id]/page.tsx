@@ -4,6 +4,7 @@ import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { Separator } from "@/components/ui/separator";
 import { phoneNumber } from "@/lib/utils";
+import { Check } from "lucide-react";
 
 export default function Page() {
     return (
@@ -20,12 +21,13 @@ export default function Page() {
                             </div>
                         ))}
                     </div>
+
                 </div>
                 <div className="col-span-5">
                     <h2>Piaggio strada 340</h2>
                     <div className="flex flex-wrap gap-3 mt-4">
-                        {['RCA', 'Echipament', 'Casca', 'Suport', 'Transport', 'Benzina', '50CC'].map(e => (
-                            <Badge variant='outline' className="text-base rounded px-6 py-2 border-[1px]">{e}</Badge>
+                        {['RCA', 'Echipament', 'Casca', 'Suport', 'Transport', 'Benzina', '50CC'].map((e, idx) => (
+                            <Badge key={idx} variant='outline' className="text-base rounded px-6 py-2 border-[1px]">{e}</Badge>
                         ))}
                     </div>
 
@@ -47,7 +49,26 @@ export default function Page() {
                         <Button variant='outline' className="p-6 bg-black text-white">BOOK NOW</Button>
                     </a>
                 </div>
+
+                <section className="col-span-7 flex flex-col gap-4">
+                    <h2>Scooter overview</h2>
+                    <p>
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Explicabo doloremque obcaecati possimus aut
+                        incidunt quod repellendus aperiam, aspernatur sint exercitationem!
+                    </p>
+                    <div className="grid grid-cols-2 max-w-md">
+                        {
+                            ['text', 'textfd40', 'fsgdrg433', 'fegsegsdt egse', 'fsdg 43f dw4', 'dfgzsrg'].map((el, idx) => (
+                                <div key={idx} className="flex gap-2">
+                                    <Check />
+                                    <span>{el}</span>
+                                </div>
+                            ))
+                        }
+                    </div>
+                </section>
             </div>
+
         </main>
     );
 }
