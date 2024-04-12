@@ -27,7 +27,7 @@ export default function Page() {
                             </div>
                         </DialogTrigger>
                         <DialogContent>
-                            <Carousel className="w-full max-w-xs">
+                            <Carousel className="w-full">
                                 <CarouselContent>
                                     {['/scooter.png', '/scooter.png', '/scooter.png'].map((el, idx) => (
                                         <CarouselItem key={idx}>
@@ -35,8 +35,8 @@ export default function Page() {
                                         </CarouselItem>
                                     ))}
                                 </CarouselContent>
-                                <CarouselPrevious />
-                                <CarouselNext />
+                                <CarouselPrevious className="left-0" />
+                                <CarouselNext className="right-0" />
                             </Carousel>
                         </DialogContent>
                     </Dialog>
