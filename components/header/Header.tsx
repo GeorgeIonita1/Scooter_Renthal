@@ -10,7 +10,7 @@ export default function Header() {
     return (
         <header>
             <div className="max-sm:hidden bg-black text-white">
-                <div className="container flex justify-end gap-4 px-12">
+                <div className="container flex justify-end gap-4 px-12 py-2">
                     <a href={`tel:${phoneNumber}`} className="flex items-center gap-2">
                         <Phone />
                         <span>{phoneNumber}</span>

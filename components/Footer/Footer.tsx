@@ -33,7 +33,7 @@ export default function Footer() {
                 </div>
             </div>
 
-            <Separator />
+            <Separator className="bg-zinc-700" />
             <div className="container">
                 <div className="py-16 grid sm:grid-cols-2 max-sm:gap-10">
                     <div>
@@ -54,7 +54,7 @@ export default function Footer() {
                 </div>
             </div>
 
-            <Separator />
+            <Separator className="bg-zinc-700" />
             <div className="container">
                 <div className="py-2">
                     <span>2024 Everest. All rights reserved</span>

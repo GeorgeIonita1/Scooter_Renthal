@@ -7,7 +7,7 @@ import { phoneNumber } from "@/lib/utils";
 
 export default function ProductCardPreview() {
     return (
-        <Card className="p-12">
+        <Card className="sm:p-12">
             <CardHeader>
                 <Image alt="scooter image" src='/scooter.png' width={600} height={600} />
                 <CardTitle>Piaggio Liberty 120</CardTitle>
