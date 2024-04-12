@@ -5,23 +5,41 @@ import { Button } from "@/components/ui/button";
 import { Separator } from "@/components/ui/separator";
 import { phoneNumber } from "@/lib/utils";
 import { Check } from "lucide-react";
+import { Dialog, DialogContent, DialogTrigger } from "@/components/ui/dialog";
+import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious } from "@/components/ui/carousel";
 
 export default function Page() {
     return (
         <main className="container py-16">
             <div className="grid md:grid-cols-12 gap-6">
                 <div className="col-span-7">
-                    <div>
-                        <Image alt="Scooter image" src='/scooter.png' width={600} height={600} />
-                    </div>
-                    <div className="grid grid-cols-3">
-                        {['/scooter.png', '/scooter.png', '/scooter.png'].map(el => (
+                    <Dialog>
+                        <DialogTrigger>
                             <div>
-                                <Image alt="scooter image" src={el} width={300} height={300} />
+                                <Image alt="Scooter image" src='/scooter.png' width={600} height={600} />
                             </div>
-                        ))}
-                    </div>
-
+                            <div className="grid grid-cols-3">
+                                {['/scooter.png', '/scooter.png', '/scooter.png'].map(el => (
+                                    <div>
+                                        <Image alt="scooter image" src={el} width={300} height={300} />
+                                    </div>
+                                ))}
+                            </div>
+                        </DialogTrigger>
+                        <DialogContent>
+                            <Carousel className="w-full max-w-xs">
+                                <CarouselContent>
+                                    {['/scooter.png', '/scooter.png', '/scooter.png'].map((el, idx) => (
+                                        <CarouselItem key={idx}>
+                                            <Image alt="Scooter image" width={500} height={500} src={el} />
+                                        </CarouselItem>
+                                    ))}
+                                </CarouselContent>
+                                <CarouselPrevious />
+                                <CarouselNext />
+                            </Carousel>
+                        </DialogContent>
+                    </Dialog>
                 </div>
                 <div className="col-span-5">
                     <h2>Piaggio strada 340</h2>
