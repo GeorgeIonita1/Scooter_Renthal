@@ -1,12 +1,13 @@
 import Image from "next/image";
+import { Check } from "lucide-react";
 
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { Separator } from "@/components/ui/separator";
 import { phoneNumber } from "@/lib/utils";
-import { Check } from "lucide-react";
 import { Dialog, DialogContent, DialogTrigger } from "@/components/ui/dialog";
 import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious } from "@/components/ui/carousel";
+import SpotlightBanner from "@/components/Banner/SpotlightBanner";
 
 export default function Page() {
     return (
@@ -41,7 +42,7 @@ export default function Page() {
                         </DialogContent>
                     </Dialog>
                 </div>
-                <div className="col-span-5">
+                <div className="col-span-7 md:col-span-5">
                     <h2>Piaggio strada 340</h2>
                     <div className="flex flex-wrap gap-3 mt-4">
                         {['RCA', 'Echipament', 'Casca', 'Suport', 'Transport', 'Benzina', '50CC'].map((e, idx) => (
@@ -86,7 +87,7 @@ export default function Page() {
                     </div>
                 </section>
             </div>
-
+            <SpotlightBanner />
         </main>
     );
 }
