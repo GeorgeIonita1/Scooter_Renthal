@@ -3,6 +3,7 @@ import { useTranslations } from 'next-intl';
 import HeroBanner from '@/components/Banner/HeroBanner';
 import BenefitCardGrid from '@/components/BenefitCard/BenefitCardGrid';
 import ProductCardGrid from '@/components/ProductCard/ProductCardGrid';
+import FAQAccordeon from '@/components/FAQAccordion/FAQAccordeon';
 
 export default function Index() {
     const t = useTranslations('Index');
@@ -13,6 +14,7 @@ export default function Index() {
             <HeroBanner />
             <ProductCardGrid />
             <BenefitCardGrid />
+            <FAQAccordeon />
         </main>
     )
 }
