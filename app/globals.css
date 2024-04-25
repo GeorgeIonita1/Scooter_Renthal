@@ -22,3 +22,12 @@ h4 {
 section {
     padding: 4rem 0;
 }
+
+header {
+    transform: translateY(-100%);
+    transition: transform 300ms;
+}
+
+.header-visible {
+    transform: translateY(0);
+}
