@@ -38,12 +38,13 @@ export default function Header({ locale }: { locale: string }) {
                     </ul>
                 </nav>
                 <div className="sm:hidden">
-                    <Sheet>
+                    <Sheet modal={true}>
                         <SheetTrigger className="py-8">Menu</SheetTrigger>
                         <SheetContent>
-                            <nav>
-                                <ul className="">
-                                    <li><SheetClose asChild><Link href='/'>Home</Link></SheetClose></li>
+                            <nav className="mt-8">
+                                <ul>
+                                    <li><LanguageSelector locale={locale} /></li>
+                                    <li className="mt-[6rem]"><SheetClose asChild><Link href='/'>Home</Link></SheetClose></li>
                                     <li><SheetClose asChild><Link href='/'>Terms and conditions</Link></SheetClose></li>
                                     <li><SheetClose asChild><Link href='/'>Contact</Link></SheetClose></li>
                                 </ul>
