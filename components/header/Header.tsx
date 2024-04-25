@@ -1,12 +1,15 @@
-import Link from "next/link";
+'use client'
+
 import { MapPin, Phone } from "lucide-react";
 
+import { Link, useRouter, usePathname } from "@/navigation";
 import { Separator } from "../ui/separator";
 import { Sheet, SheetClose, SheetContent, SheetTrigger } from "../ui/sheet";
 import { Button } from "../ui/button";
 import { phoneNumber } from "@/lib/utils";
+import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "../ui/select";
 
-export default function Header() {
+export default function Header({ locale }: { locale: string }) {
     return (
         <header>
             <div className="max-sm:hidden bg-black text-white">
@@ -27,10 +30,11 @@ export default function Header() {
                     <Link href='/'>Everest</Link>
                 </Button>
                 <nav className="max-sm:hidden">
-                    <ul className="flex">
+                    <ul className="flex items-center">
                         <li><Button className="py-8" variant='link'><Link href='/'>Home</Link></Button></li>
                         <li><Button className="py-8" variant='link'><Link href='/'>Terms and conditions</Link></Button></li>
                         <li><Button className="py-8" variant='link'><Link href='/'>Contact</Link></Button></li>
+                        <li><LanguageSelector locale={locale} /></li>
                     </ul>
                 </nav>
                 <div className="sm:hidden">
@@ -49,5 +53,22 @@ export default function Header() {
                 </div>
             </div>
         </header>
+    );
+}
+
+function LanguageSelector({ locale }: { locale: string }) {
+    const pathname = usePathname()
+    const router = useRouter();
+
+    return (
+        <Select defaultValue={locale} onValueChange={e => router.replace(pathname, { locale: e })}>
+            <SelectTrigger>
+                <SelectValue placeholder="Language" />
+            </SelectTrigger>
+            <SelectContent>
+                <SelectItem value="en">English</SelectItem>
+                <SelectItem value="ro">Romana</SelectItem>
+            </SelectContent>
+        </Select>
     );
 }
