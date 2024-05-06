@@ -11,7 +11,7 @@ import SpotlightBanner from "@/components/Banner/SpotlightBanner";
 
 export default function Page() {
     return (
-        <main className="container py-16">
+        <main className="container pt-[120px] sm:pt-[136px]">
             <div className="grid md:grid-cols-12 gap-6">
                 <div className="col-span-7">
                     <Dialog>
