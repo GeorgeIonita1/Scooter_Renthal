@@ -31,3 +31,77 @@ header {
 .header-visible {
     transform: translateY(0);
 }
+
+/* --------------------------------gallery component-------------------------------- */
+.gallery-container {
+    display: grid;
+    gap: 1rem;
+    grid-auto-flow: dense;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    grid-auto-rows: 20vw;
+}
+
+.gallery-container>div:nth-child(8n+1),
+.gallery-container>div:nth-child(8n+8) {
+    grid-row: span 2;
+    grid-column: span 2;
+}
+
+.gallery-container>div:nth-child(8n+2) {
+    grid-row: span 1;
+    grid-column: 3 / span 1;
+}
+
+.gallery-container>div:nth-child(8n+3) {
+    grid-row: span 1;
+    grid-column: 3 / span 1;
+}
+
+.gallery-container>div:nth-child(8n+4),
+.gallery-container>div:nth-child(8n+5) {
+    grid-row: span 2;
+    grid-column: span 1;
+}
+
+.gallery-container>div:nth-child(8n+6),
+.gallery-container>div:nth-child(8n+7) {
+    grid-row: span 1;
+    grid-column: 2 / span 1;
+}
+
+@media only screen and (max-width: 1024px) {
+    .gallery-container {
+        max-width: 40rem;
+        margin: 0 auto;
+        grid-auto-rows: 50vw;
+        gap: .5rem;
+    }
+
+    .gallery-container>div:nth-child(8n+1),
+    .gallery-container>div:nth-child(8n+8) {
+        grid-row: span 1;
+        grid-column: span 4;
+    }
+
+    .gallery-container>div:nth-child(8n+2) {
+        grid-row: span 1;
+        grid-column: 1 / span 2;
+    }
+
+    .gallery-container>div:nth-child(8n+3) {
+        grid-row: span 1;
+        grid-column: 1 / span 2;
+    }
+
+    .gallery-container>div:nth-child(8n+4),
+    .gallery-container>div:nth-child(8n+5) {
+        grid-row: span 2;
+        grid-column: span 2;
+    }
+
+    .gallery-container>div:nth-child(8n+6),
+    .gallery-container>div:nth-child(8n+7) {
+        grid-row: span 1;
+        grid-column: 3 / span 2;
+    }
+}

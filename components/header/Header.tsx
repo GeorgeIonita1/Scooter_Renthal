@@ -31,7 +31,7 @@ export default function Header({ locale }: { locale: string }) {
     }, [scrollPosition])
 
     return (
-        <header className={`${isVisible ? 'header-visible' : ''} fixed w-full`}>
+        <header className={`${isVisible ? 'header-visible' : ''} fixed w-full z-10`}>
             <div className="max-sm:hidden bg-black text-white">
                 <div className="container flex justify-end gap-4 px-12 py-2">
                     <a href={`tel:${phoneNumber}`} className="flex items-center gap-2">

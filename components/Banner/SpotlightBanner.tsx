@@ -1,7 +1,7 @@
 import Image from "next/image";
 
 import { Button } from "../ui/button";
-import { phoneNumber } from "@/lib/utils";
+import { Link } from "@/navigation";
 
 export default function SpotlightBanner() {
     return (
@@ -19,9 +19,9 @@ export default function SpotlightBanner() {
                         <span className="basis-full">Satisfied clients</span>
                     </div>
                 </div>
-                <a href={`tel:${phoneNumber}`}>
+                <Link href='/gallery'>
                     <Button className="bg-black text-white p-6 mt-4" variant='outline'>BOOK NOW</Button>
-                </a>
+                </Link>
             </div>
             <div className="grid col-span-7 justify-center sm:grid-cols-2 gap-4 max-md:mt-16">
                 <Image alt="Scooter on a beach" src='/beach_scooter.jpg' width={400} height={700} />
