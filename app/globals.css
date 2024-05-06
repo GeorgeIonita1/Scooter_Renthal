@@ -105,3 +105,17 @@ header {
         grid-column: 3 / span 2;
     }
 }
+
+.product-detail-gallery>div {
+    grid-column: span 2;
+}
+
+.product-detail-gallery>div:first-child {
+    grid-column: span 12;
+}
+
+@media only screen and (max-width: 640px) {
+    .product-detail-gallery>div {
+        grid-column: span 3;
+    }
+}

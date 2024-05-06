@@ -8,39 +8,14 @@ import { phoneNumber } from "@/lib/utils";
 import { Dialog, DialogContent, DialogTrigger } from "@/components/ui/dialog";
 import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious } from "@/components/ui/carousel";
 import SpotlightBanner from "@/components/Banner/SpotlightBanner";
+import ProductDetailGallery from "@/components/Product/ProductDetailGallery";
 
 export default function Page() {
     return (
         <main className="container pt-[120px] sm:pt-[136px]">
             <div className="grid md:grid-cols-12 gap-6">
                 <div className="col-span-7">
-                    <Dialog>
-                        <DialogTrigger>
-                            <div>
-                                <Image alt="Scooter image" src='/scooter.png' width={600} height={600} />
-                            </div>
-                            <div className="grid grid-cols-3">
-                                {['/scooter.png', '/scooter.png', '/scooter.png'].map(el => (
-                                    <div>
-                                        <Image alt="scooter image" src={el} width={300} height={300} />
-                                    </div>
-                                ))}
-                            </div>
-                        </DialogTrigger>
-                        <DialogContent>
-                            <Carousel className="w-full">
-                                <CarouselContent>
-                                    {['/scooter.png', '/scooter.png', '/scooter.png'].map((el, idx) => (
-                                        <CarouselItem key={idx}>
-                                            <Image alt="Scooter image" width={500} height={500} src={el} />
-                                        </CarouselItem>
-                                    ))}
-                                </CarouselContent>
-                                <CarouselPrevious className="left-0" />
-                                <CarouselNext className="right-0" />
-                            </Carousel>
-                        </DialogContent>
-                    </Dialog>
+                    <ProductDetailGallery />
                 </div>
                 <div className="col-span-7 md:col-span-5">
                     <h2>Piaggio strada 340</h2>

@@ -2,7 +2,7 @@ import { useTranslations } from 'next-intl';
 
 import HeroBanner from '@/components/Banner/HeroBanner';
 import BenefitCardGrid from '@/components/BenefitCard/BenefitCardGrid';
-import ProductCardGrid from '@/components/ProductCard/ProductCardGrid';
+import ProductCardGrid from '@/components/Product/ProductCardGrid';
 import FAQAccordeon from '@/components/FAQAccordion/FAQAccordeon';
 
 export default function Index() {
