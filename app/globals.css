@@ -106,6 +106,7 @@ header {
     }
 }
 
+/* -------------------------------- product-detail-gallery ------------------------ */
 .product-detail-gallery>div {
     grid-column: span 2;
 }
