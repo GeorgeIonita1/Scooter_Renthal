@@ -27,7 +27,7 @@ export default function ProductDetailGallery() {
                     ))}
                 </div>
             </DialogTrigger>
-            <DialogContent className="dialog-product-gallery">
+            <DialogContent className="dialog-reset-close-btn">
                 <Carousel
                     className="w-full"
                     opts={{
@@ -37,7 +37,7 @@ export default function ProductDetailGallery() {
                     <CarouselContent className="pt-2">
                         {['/street_scooter.jpg', '/scooter.png', '/beach_scooter.jpg', '/hero_scooter.jpg'].map((el, idx) => (
                             <CarouselItem key={idx}>
-                                <Image alt="Scooter image" width={500} height={500} src={el} className="aspect-square object-cover" />
+                                <Image alt="Scooter image" width={500} height={500} src={el} className="aspect-square object-cover mx-auto" />
                             </CarouselItem>
                         ))}
                     </CarouselContent>

@@ -121,6 +121,7 @@ header {
     }
 }
 
-.dialog-product-gallery .dialog-close-btn {
+/* ----------------------------------- dialog-reset-close-btn ------------------------------ */
+.dialog-reset-close-btn .dialog-close-btn {
     display: none;
 }
