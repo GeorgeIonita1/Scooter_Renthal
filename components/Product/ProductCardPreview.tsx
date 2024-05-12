@@ -4,7 +4,7 @@ import { Link } from "@/navigation";
 import { Card, CardContent, CardFooter, CardHeader, CardTitle } from "../ui/card";
 import { Button } from "../ui/button";
 import { Dialog, DialogContent, DialogTrigger } from "../ui/dialog";
-import ContactCard from "../ContactCard/ContactCard";
+import ContactPersonCard from "../Contact/ContactPersonCard";
 
 export default function ProductCardPreview() {
     return (
@@ -27,7 +27,7 @@ export default function ProductCardPreview() {
                         <Button className="w-full py-8 bg-black text-white" variant='outline'>CONTACT</Button>
                     </DialogTrigger>
                     <DialogContent className="max-w-lg p-8">
-                        <ContactCard />
+                        <ContactPersonCard />
                     </DialogContent>
                 </Dialog>
                 <Button asChild className="w-full py-8" variant='outline'>

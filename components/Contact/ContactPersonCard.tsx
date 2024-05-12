@@ -5,7 +5,7 @@ import { Button } from "../ui/button";
 import { Mail, Phone } from "lucide-react";
 import { phoneNumber } from "@/lib/utils";
 
-export default function ContactCard() {
+export default function ContactPersonCard() {
     return (
         <Card className="text-center">
             <CardHeader className="flex flex-row justify-center">
